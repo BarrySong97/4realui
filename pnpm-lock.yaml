@@ -35,6 +35,9 @@ importers:
       react-fast-marquee:
         specifier: ^1.6.5
         version: 1.6.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      shiki:
+        specifier: ^3.2.2
+        version: 3.2.2
       tailwind-merge:
         specifier: ^3.2.0
         version: 3.2.0
