@@ -1,16 +1,23 @@
 import GridLine from "@/components/layout/GridLine";
-import { Banner } from "fumadocs-ui/components/banner";
 import { DynamicCodeBlock } from "fumadocs-ui/components/dynamic-codeblock";
 import { Tabs, Tab } from "fumadocs-ui/components/tabs";
+import SlotMachineText2 from "@/components/common/SlotMachineText2";
 
 export default function HomePage() {
   return (
     <div className="max-w-[92rem] mx-auto">
-      <GridLine />
-      <div className="flex h-screen  items-center z-10 ">
+      <GridLine showSecondLine={false} showThirdLine={false} />
+      <div className="flex h-screen  items-center z-10  mx-10 ">
         <div className="flex-1">
           <div className="relative z-10">
-            <Tabs items={["pnpm", "npm", "bun", "yarn"]}>
+            <div className="text-5xl font-bold mb-10">
+              <SlotMachineText2 text="Made with" className="mb-2 block" />
+              <SlotMachineText2 text="React, Tailwind and Motion" />
+            </div>
+            <Tabs
+              className="max-w-[30rem]"
+              items={["pnpm", "npm", "bun", "yarn"]}
+            >
               <Tab value="pnpm">
                 <DynamicCodeBlock
                   lang="bash"
@@ -38,7 +45,7 @@ export default function HomePage() {
             </Tabs>
           </div>
         </div>
-        <div className="flex-2"></div>
+        <div className="flex-1"></div>
       </div>
     </div>
   );
